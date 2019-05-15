@@ -149,3 +149,124 @@ false
 null
 SuppressWarnings
 
+---
+---
+---
+---
+---
+# Séance n°2
+ 
+(réalisée le 05/05/2019) par Frédéric CANAUD
+
+Objectif de la séance : Dimmensionner le vaisseau dans l'espace de jeu + Moteur de jeu (fini)
+
+Nombre de fonctionnalités implémentées durant la séance : 1 (+ Moteur Graphique)
+
+Description du travail réalisé durant cette séance :
+
+## Fonctionnalité n°2 : Dimenssionner un nouveau vaisseau (fini)
+
+➢	Story n°1 : Positionner un nouveau vaisseau avec une dimension donnée 
+○	Un nouveau vaisseau avec des dimensions (largeur et hauteur) est correctement positionné dans l'esapce de jeu
+
+➢	Story n°2 : Faire en sorte qu'il soit impossible de positionner un nouveau vaisseau qui déborde de l'espace de jeu : 
+○	Un nouveau vaisseau est positionné dans l'espace de jeu mais sa dimension déborde de l'espace.
+○	On lève alors une exception 
+
+➢	Story n°3 : Déplacer un vaisseau vers la droite en tenant compte de sa dimension
+○	Le vaisseau se déplace horizontalement vers la droite dans l'espace de jeu.
+○	Le vaisseau reste immobile s'il est au bord de l'espace de jeu.
+
+○	Le vaisseau se déplace horizontalement vers lagauche dans l'espace de jeu.
+○	Le vaisseau reste immobile s'il est au bord de l'espace de jeu.
+
+### Fonctionnalité en cours d’implémentation 
+
+Aucune 
+
+###Diagramme de classes (séance n°2) 
+
+![alt text](http://image.noelshack.com/fichiers/2019/20/3/1557928360-diagramme-classes-2.png)
+
+### Nuage de mots du projet spaceinvaders (séance n°2)  
+
+(généré à l’aide de Source Code Word Cloud Generator avec la liste JavaBlacklist.txt fournie en annexe)
+ 
+![alt text](http://image.noelshack.com/fichiers/2019/20/3/1557928372-nuage-de-mots-2.png)
+ 
+### Difficultés rencontrées pendant la séance n°2
+Aucune difficulté particulière …
+
+### Remarques et commentaires sur la séance n°2
+Aucune difficulté particulière …
+
+### Conclusion
+
+J'ai donc réussi à dimensionner correctement mon vaisseau, et à pouvoir le déplacer sur l'écran.
+
+### Glossaire
+
+Vaisseau :  véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs.
+
+Envahisseur  :  ennemi qui apparaît à l'écran, se déplace automatiquement et qui doit être détruit par un missile lancé depuis le vaisseau du joueur.
+
+Missile :  projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
+ 
+### Annexe : Contenu du fichier JavaBlacklist.txt utilisé 
+
+Pour la génération des nuages de mots via Source Code Word Cloud Generator
+
+abstract
+assert
+boolean
+break
+byte
+case
+catch
+char
+class
+const
+continue
+default
+do
+double
+else
+enum
+extends
+final
+finally
+float
+for
+goto
+if
+implements
+import
+instanceof
+int
+interface
+long
+native
+new
+package
+private
+protected
+public
+return
+short
+static
+strictfp
+super
+switch
+synchronized
+this
+throw
+throws
+transient
+try
+void
+volatile
+while
+true
+false
+null
+SuppressWarnings
