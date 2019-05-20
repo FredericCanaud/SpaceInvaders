@@ -19,7 +19,7 @@ public class Controleur implements KeyListener {
 	 * commande a retourner la difference avec la commandeencours vient du fait
 	 * qu'on veut memoriser une touche appuyee
 	 */
-	private  Commande commandeARetourner;
+	private Commande commandeARetourner;
 
 	/**
 	 * construction du controleur par defaut le controleur n'a pas de commande
@@ -30,8 +30,7 @@ public class Controleur implements KeyListener {
 	}
 
 	/**
-	 * quand on demande les commandes, le controleur retourne la commande en
-	 * cours
+	 * quand on demande les commandes, le controleur retourne la commande en cours
 	 * 
 	 * @return commande faite par le joueur
 	 */
@@ -41,12 +40,11 @@ public class Controleur implements KeyListener {
 		return (aRetourner);
 	}
 
-	
 	/**
 	 * met a jour les commandes en fonctions des touches appuyees
 	 */
 
-    public void keyPressed(KeyEvent e) {
+	public void keyPressed(KeyEvent e) {
 
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_LEFT:
@@ -91,10 +89,10 @@ public class Controleur implements KeyListener {
 		case KeyEvent.VK_SPACE:
 			this.commandeEnCours.tir = false;
 			break;
-		default: break;
+		default:
+			break;
 		}
 	}
-
 
 	/**
 	 * ne fait rien

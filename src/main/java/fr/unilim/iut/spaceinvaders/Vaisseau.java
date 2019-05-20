@@ -8,10 +8,10 @@ public class Vaisseau extends Sprite {
 		super(dimension, positionOrigine, vitesse);
 	}
 
-	public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException{
+	public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException {
 		if (dimensionMissile.longueur() > this.dimension.longueur()) {
-            throw new MissileException("La longueur du missile est supérieure à celle du personnage");
-        }
+			throw new MissileException("La longueur du missile est supérieure à celle du personnage");
+		}
 		Position positionOrigineMissile = calculerLaPositionDeTirDuMissile(dimensionMissile);
 		return new Missile(dimensionMissile, positionOrigineMissile, vitesseMissile);
 	}

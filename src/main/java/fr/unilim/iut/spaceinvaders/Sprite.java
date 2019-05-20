@@ -2,16 +2,16 @@ package fr.unilim.iut.spaceinvaders;
 
 public abstract class Sprite {
 
+	protected Position origine;
+	protected Dimension dimension;
+	protected int vitesse = 1;
+
 	public Sprite(Dimension dimension, Position origine, int vitesse) {
 		super();
 		this.dimension = dimension;
 		this.origine = origine;
 		this.vitesse = vitesse;
 	}
-
-	protected Position origine;
-	protected Dimension dimension;
-	protected int vitesse;
 
 	public Sprite() {
 		super();
@@ -48,12 +48,8 @@ public abstract class Sprite {
 		return this.origine.abscisse() + this.dimension.longueur() - 1;
 	}
 
-	public void seDeplacerVersLaDroite() {
-		this.origine.changerAbscisse(this.origine.abscisse() + vitesse);
-	}
-
-	public void seDeplacerVersLaGauche() {
-		this.origine.changerAbscisse(this.origine.abscisse() - vitesse);
+	public void deplacerHorizontalementVers(Direction direction) {
+		this.origine.changerAbscisse(this.origine.abscisse() + direction.valeur() * vitesse);
 	}
 
 	public void positionner(int x, int y) {
@@ -67,6 +63,10 @@ public abstract class Sprite {
 
 	public int longueur() {
 		return this.dimension.longueur();
+	}
+
+	public void deplacerVerticalementVers(Direction direction) {
+		this.origine.changerOrdonnee(this.origine.ordonnee() + direction.valeur() * vitesse);
 	}
 
 }
