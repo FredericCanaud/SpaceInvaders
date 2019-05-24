@@ -1,0 +1,33 @@
+package fr.unilim.iut.spaceinvaders.model;
+
+import fr.unilim.iut.spaceinvaders.utils.MissileException;
+
+public class Collision {
+
+    public boolean detecterCollision(Sprite character, Sprite missile) {
+        if (missile.longueur() > character.longueur()) {
+            throw new MissileException("La longueur du missile est supérieure à celle du personnage");
+        }
+        return this.PersonnageToucheParMissile(character, missile);
+    }
+    public boolean PersonnageToucheParMissile(Sprite character, Sprite missile) {
+    	return ( (this.PersonnageToucheEnBasParMissile(character, missile) && personnageToucheHorizontalementParMissile(character, missile))
+    		   || (this.PersonnageToucheEnHautParMissile(character, missile) && personnageToucheHorizontalementParMissile(character, missile)) );
+    }
+	private boolean personnageToucheHorizontalementParMissile(Sprite character, Sprite missile) {
+		return this.PersonnageToucheAGaucheParMissile(character, missile) || this.PersonnageToucheADroiteParMissile(character, missile);
+	}
+
+    public boolean PersonnageToucheAGaucheParMissile(Sprite character, Sprite missile) {
+        return character.abscisseLaPlusAGauche() <= missile.abscisseLaPlusADroite() && missile.abscisseLaPlusAGauche() <= character.abscisseLaPlusADroite();
+    }
+    public boolean PersonnageToucheADroiteParMissile(Sprite character, Sprite missile) {
+        return character.abscisseLaPlusADroite() >= missile.abscisseLaPlusAGauche() && missile.abscisseLaPlusADroite() >= character.abscisseLaPlusAGauche();
+    }
+    public boolean PersonnageToucheEnHautParMissile(Sprite character, Sprite missile) {
+        return character.ordonneeLaPlusHaute() >= missile.ordonneeLaPlusBasse();
+    }
+    public boolean PersonnageToucheEnBasParMissile(Sprite character, Sprite missile) {
+        return character.ordonneeLaPlusBasse() >= missile.ordonneeLaPlusHaute();
+    }
+}

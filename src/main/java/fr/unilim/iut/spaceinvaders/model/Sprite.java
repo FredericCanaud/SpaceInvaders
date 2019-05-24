@@ -1,10 +1,10 @@
-package fr.unilim.iut.spaceinvaders;
+package fr.unilim.iut.spaceinvaders.model;
 
 public abstract class Sprite {
 
 	protected Position origine;
 	protected Dimension dimension;
-	protected int vitesse = 1;
+	protected int vitesse;
 
 	public Sprite(Dimension dimension, Position origine, int vitesse) {
 		super();
@@ -68,5 +68,10 @@ public abstract class Sprite {
 	public void deplacerVerticalementVers(Direction direction) {
 		this.origine.changerOrdonnee(this.origine.ordonnee() + direction.valeur() * vitesse);
 	}
-
+	public boolean estTouche(Collision collision, Sprite sprite) {
+		if(collision.PersonnageToucheParMissile(this, sprite)) {
+			return true;
+		}
+		return false;
+	}
 }
