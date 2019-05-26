@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import fr.unilim.iut.spaceinvaders.model.*;
+import fr.unilim.iut.spaceinvaders.utils.MissileException;
 
 public class CollisionTest {
 
@@ -18,10 +19,10 @@ public class CollisionTest {
     @Test
     public void test_EnvahisseurToucheParMissile_DetecterCollision() {
 
-       Envahisseur envahisseur = new Envahisseur(new Dimension(7,2),new Position(5,2),3);
-       Missile missile = new Missile(new Dimension(3,2),new Position(10,3),3);
+       Envahisseur envahisseur = new Envahisseur(new Dimension(2,2),new Position(5,2),3);
+       Missile missile = new Missile(new Dimension(1,2),new Position(5,2),3);
        
-       assertEquals(collision.detecterCollision(envahisseur, missile), true);
+       assertTrue(collision.detecterCollision(envahisseur, missile));
 
     }
 
@@ -31,7 +32,7 @@ public class CollisionTest {
        Envahisseur envahisseur = new Envahisseur(new Dimension(1,1),new Position(5,2),3);
        Missile missile = new Missile(new Dimension(1,1),new Position(11,9),3);
 
-       assertEquals(collision.detecterCollision(envahisseur, missile), false);
+       assertFalse(collision.detecterCollision(envahisseur, missile));
 
     }
 
@@ -41,17 +42,16 @@ public class CollisionTest {
        Envahisseur envahisseur = new Envahisseur(new Dimension(2,2),new Position(5,2),3);
        Missile missile = new Missile(new Dimension(1,2),new Position(5,1),3);
 
-       assertEquals(collision.PersonnageToucheAGaucheParMissile(envahisseur, missile),true);
+       assertTrue(collision.PersonnageToucheAGaucheParMissile(envahisseur, missile));
 
     }
-    
     @Test
     public void test_PersonnageToucheParMissileADroite_DetecterCollision() {
 
        Envahisseur envahisseur = new Envahisseur(new Dimension(2,2),new Position(5,2),3);
-       Missile missile = new Missile(new Dimension(1,2),new Position(6,3),3);
+       Missile missile = new Missile(new Dimension(1,2),new Position(5,2),3);
 
-       assertEquals(collision.PersonnageToucheAGaucheParMissile(envahisseur, missile),true);
+       assertTrue(collision.PersonnageToucheADroiteParMissile(envahisseur, missile));
 
     }
     @Test
@@ -60,16 +60,22 @@ public class CollisionTest {
        Envahisseur envahisseur = new Envahisseur(new Dimension(2,2),new Position(5,2),3);
        Missile missile = new Missile(new Dimension(1,2),new Position(5,1),3);
 
-       assertEquals(collision.PersonnageToucheAGaucheParMissile(envahisseur, missile),true);
+       assertTrue(collision.PersonnageToucheEnHautParMissile(envahisseur, missile));
 
     }
     @Test
     public void test_PersonnageToucheParMissileEnBas_DetecterCollision() {
 
        Envahisseur envahisseur = new Envahisseur(new Dimension(2,2),new Position(5,2),3);
-       Missile missile = new Missile(new Dimension(1,2),new Position(6,3),3);
+       Missile missile = new Missile(new Dimension(1,2),new Position(5,2),3);
 
-       assertEquals(collision.PersonnageToucheAGaucheParMissile(envahisseur, missile),true);
+       assertTrue(collision.PersonnageToucheEnBasParMissile(envahisseur, missile));
 
     }
+    @Test(expected = MissileException.class)
+	public void test_LongueurMissileSuperieureALongueurEnvahisseur_UneExceptionEstLevee() throws Exception {
+    	Envahisseur envahisseur = new Envahisseur(new Dimension(2,2),new Position(5,2),3);
+        Missile missile = new Missile(new Dimension(3,3),new Position(5,1),3);
+        (new Collision()).detecterCollision(envahisseur,missile);
+	}
 }

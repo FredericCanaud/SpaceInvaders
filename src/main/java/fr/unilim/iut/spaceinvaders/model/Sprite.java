@@ -12,11 +12,6 @@ public abstract class Sprite {
 		this.origine = origine;
 		this.vitesse = vitesse;
 	}
-
-	public Sprite() {
-		super();
-	}
-
 	public boolean occupeLaPosition(int x, int y) {
 		if (estAbscisseCouverte(x) && estOrdonneeCouverte(y))
 			return true;
@@ -67,11 +62,5 @@ public abstract class Sprite {
 
 	public void deplacerVerticalementVers(Direction direction) {
 		this.origine.changerOrdonnee(this.origine.ordonnee() + direction.valeur() * vitesse);
-	}
-	public boolean estTouche(Collision collision, Sprite sprite) {
-		if(collision.PersonnageToucheParMissile(this, sprite)) {
-			return true;
-		}
-		return false;
 	}
 }

@@ -21,8 +21,6 @@ public abstract class Character extends Sprite {
         int abscisseOriginePersonnage = abscisseMilieuPersonnage - (dimensionMissile.longueur() / 2);
 
         int ordonneeOrigineMissile = this.ordonneeLaPlusBasse() - 1;
-        if (Direction.BAS_ECRAN.equals(direction))
-            ordonneeOrigineMissile = this.ordonneeLaPlusHaute() + 1;
         return new Position(abscisseOriginePersonnage, ordonneeOrigineMissile);
     }
 

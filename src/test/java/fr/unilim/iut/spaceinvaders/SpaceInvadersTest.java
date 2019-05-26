@@ -1,7 +1,8 @@
 package fr.unilim.iut.spaceinvaders;
 
-    import static org.junit.Assert.assertEquals;
-    import static org.junit.Assert.fail;
+	import static org.junit.Assert.assertEquals;
+	import static org.junit.Assert.assertFalse;
+	import static org.junit.Assert.fail;
 
     import org.junit.Test;
     import org.junit.Before;
@@ -115,6 +116,21 @@ package fr.unilim.iut.spaceinvaders;
 			} catch (final DebordementEspaceJeuException e) {
 			}
 	
+	   }
+	   @Test
+		public void test_UnNouveauEnvahisseurPositionneDansEspaceJeuMaisAvecDimensionTropGrande_DoitLeverUneExceptionDeDebordement() {
+		   
+			try {
+				spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(9,2), new Position(7,9), 1);
+				fail("Dépassement de l'envahisseur à droite en raison de sa longueur trop importante : devrait déclencher une exception DebordementEspaceJeuException");
+			} catch (final DebordementEspaceJeuException e) {
+			}
+			
+			try {
+				spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,4), new Position(7,1), 1);
+				fail("Dépassement de l'envahisseur vers le haut en raison de sa hauteur trop importante : devrait déclencher une exception DebordementEspaceJeuException");
+			} catch (final DebordementEspaceJeuException e) {
+			}
 	   }
 	   @Test
 		public void test_VaisseauImmobile_DeplacerVaisseauVersLaDroite() {
@@ -374,6 +390,6 @@ package fr.unilim.iut.spaceinvaders;
 				spaceinvaders.deplacerMissile();
 			}
 			spaceinvaders.evoluer(null);
-			assertEquals(false, spaceinvaders.etreFini());
+			assertFalse(spaceinvaders.etreFini());
 		}
     }
