@@ -72,10 +72,4 @@ public class CollisionTest {
        assertTrue(collision.PersonnageToucheEnBasParMissile(envahisseur, missile));
 
     }
-    @Test(expected = MissileException.class)
-	public void test_LongueurMissileSuperieureALongueurEnvahisseur_UneExceptionEstLevee() throws Exception {
-    	Envahisseur envahisseur = new Envahisseur(new Dimension(2,2),new Position(5,2),3);
-        Missile missile = new Missile(new Dimension(3,3),new Position(5,1),3);
-        (new Collision()).detecterCollision(envahisseur,missile);
-	}
 }

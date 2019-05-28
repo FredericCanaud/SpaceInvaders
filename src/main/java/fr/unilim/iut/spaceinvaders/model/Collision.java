@@ -1,13 +1,8 @@
 package fr.unilim.iut.spaceinvaders.model;
 
-import fr.unilim.iut.spaceinvaders.utils.MissileException;
-
 public class Collision {
 
     public boolean detecterCollision(Sprite character, Sprite missile) {
-        if (missile.longueur() > character.longueur()) {
-            throw new MissileException("La longueur du missile est supérieure à celle du personnage");
-        }
         return this.PersonnageToucheParMissile(character, missile);
     }
     public boolean PersonnageToucheParMissile(Sprite character, Sprite missile) {
