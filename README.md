@@ -291,6 +291,44 @@ J'ai donc réussi à créer un envahisseur dans l'espace de jeu, et à pouvoir l
 ---
 ---
 
+### Fonctionnalité n°6 : Détecter une collision entre deux sprites
+
+○	Un système de collision entre les sprites est mis en place : <br/> <br/>
+
+■	Character touché à droite : Si abscisse à droite du missile > abscisse à gauche du personnage et si abscisse à gauche du missile < abscisse à droite du personnage <br/>
+■	Character touché à gauche : Si abscisse à droite du missile < abscisse à gauche du personnage et si abscisse à gauche du missile < abscisse à droite du personnage <br/>
+■	Character touché en haut : Si ordonnée en bas du missile > ordonnée en haut du personnage et si ordonnée en haut du missile < ordonnée en bas du personnage <br/>
+■	Character touché en bas : Si ordonnée en bas du missile > ordonnée en haut du personnage et si ordonnée en haut du missile > ordonnée en bas du personnage <br/> <br/>
+
+Il suffit ensuite de combiner ces méthodes (une ordonnee et une abscisse touchée) pour détecter une collision. </br>
+
+○	6 tests sont mis en place dans une classe CollisionTest afin de valider nos méthodes : <br/> <br/>
+
+■	Cas où character touché à droite <br/>
+■	Cas où character touché à gauche <br/>
+■	Cas où character touché en haut <br/>
+■	Cas où character touché en bas <br/>
+■	Cas où la méthode détecterCollision renvoie vrai <br/>
+■	Cas où la méthode détecterCollision renvoie faux <br/> <br/>
+
+○	Modification de la méthode évoluer, qui fait disparaître deux sprites lors d'une collision. <br/> <br/>
+
+### Fonctionnalité n°7 : Terminer le jeu
+
+○	Suite au système de collision, un système de fin de jeu est mis en place :
+
+■	Si l'ennemi vient à disparaître, le jeu rend la méthode êtreFini vrai, et un message de fin est renvoyé au joueur. <br/>
+
+### Diagramme de classes (Fonctionnalité 6 et 7) 
+
+![alt text](http://image.noelshack.com/fichiers/2019/22/2/1559023119-diagramme-classes-6-7.png)
+
+### Nuage de mots du projet spaceinvaders (Fonctionnalité 6 et 7) 
+
+(généré à l’aide de Source Code Word Cloud Generator avec la liste JavaBlacklist.txt fournie en annexe)
+ 
+![alt text](http://image.noelshack.com/fichiers/2019/22/2/1559023120-nuage-6-7.png)
+ 
 ### Glossaire
 
 Vaisseau :  Véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs.
