@@ -1,4 +1,5 @@
-# Space Invaders
+# Space Invaders <br/>
+
 CANAUD Frédéric
 Groupe G3B
 
@@ -17,13 +18,9 @@ Année scolaire 2018/2019
 	Glossaire
 	Annexe
  
-## Introduction
-
-Durant cette première séance, nous allons définir le vaisseau, ainsi que ses déplacements dans l'espace de jeu. lE
-
-
  
-# Séance n°1 
+# Séance n°1 <br/>
+
 (réalisée le 07/05/2019) par Frédéric CANAUD
 
 Objectif de la séance : Déplacer un vaisseau dans l'espace de jeu (fini)
@@ -60,10 +57,6 @@ Description du travail réalisé durant cette séance :
 
 Remarque : Pour pouvoir, mettre en place les tests, il a été nécessaire d’ajouter une fonctionnalité supplémentaire qui permet de représenter l’espace de jeu dans une chaîne ASCII.
 
-### Fonctionnalité en cours d’implémentation 
-
-Aucune 
-
 ### Diagramme de classes (séance n°1) 
 
 ![alt text](http://image.noelshack.com/fichiers/2019/19/2/1557225921-diagramme-classes.png)
@@ -73,21 +66,9 @@ Aucune 
 (généré à l’aide de Source Code Word Cloud Generator avec la liste JavaBlacklist.txt fournie en annexe)
  
 ![alt text](http://image.noelshack.com/fichiers/2019/19/2/1557225305-nuage-de-mots-1.png)
- 
-### Difficultés rencontrées pendant la séance n°1
-Aucune difficulté particulière …
-
-### Remarques et commentaires sur la séance n°1
-
-### Conclusion
-
-J'ai donc réussi à générer le vaisseau du joueur, et à pouvoir le faire bouger de droite à gauche en délimitant l'espace de jeu pour ne pas qu'il quitte celui-ci.
 
 ---
----
----
----
----
+
 # Séance n°2
  
 (réalisée le 14/05/2019) par Frédéric CANAUD
@@ -114,9 +95,6 @@ Description du travail réalisé durant cette séance :
 ○	Le vaisseau se déplace horizontalement vers lagauche dans l'espace de jeu. <br/>
 ○	Le vaisseau reste immobile s'il est au bord de l'espace de jeu.
 
-### Fonctionnalité en cours d’implémentation 
-
-Aucune 
 
 ### Diagramme de classes (séance n°2) 
 
@@ -127,21 +105,7 @@ Aucune 
 (généré à l’aide de Source Code Word Cloud Generator avec la liste JavaBlacklist.txt fournie en annexe)
  
 ![alt text](http://image.noelshack.com/fichiers/2019/20/3/1557928372-nuage-de-mots-2.png)
- 
-### Difficultés rencontrées pendant la séance n°2
-Aucune difficulté particulière …
 
-### Remarques et commentaires sur la séance n°2
-Aucune difficulté particulière …
-
-### Conclusion
-
-J'ai donc réussi à dimensionner correctement mon vaisseau, et à pouvoir le déplacer sur l'écran.
-
----
----
----
----
 ---
 
 # Séance n°3
@@ -167,11 +131,6 @@ Description du travail réalisé durant cette séance :
 ○	Déplacement à droite et cas limites
 ○	Déplacement à gauche et cas limites
 
-
-### Fonctionnalité en cours d’implémentation 
-
-Aucune 
-
 ### Diagramme de classes (séance n°3) 
 
 ![alt text](http://image.noelshack.com/fichiers/2019/21/2/1558446377-diagrammef3.png)
@@ -181,16 +140,6 @@ Aucune 
 (généré à l’aide de Source Code Word Cloud Generator avec la liste JavaBlacklist.txt fournie en annexe)
  
 ![alt text](http://image.noelshack.com/fichiers/2019/21/2/1558446378-nuagef3.png)
- 
-### Difficultés rencontrées pendant la séance n°3
-Aucune difficulté particulière …
-
-### Remarques et commentaires sur la séance n°3
-Aucune difficulté particulière …
-
-### Conclusion
-
-J'ai donc réussi à paramétrer une vitesse à mon vaisseau, qui peut être choisie.
 
 ---
 
@@ -217,10 +166,6 @@ J'ai donc réussi à paramétrer une vitesse à mon vaisseau, qui peut être cho
 o	Gestion de la disparition du missile en haut de l'écran <br/>
 o	Gestion de la vitesse du missile
 
-### Fonctionnalité en cours d’implémentation 
-
-Aucune 
-
 ### Diagramme de classes (séance n°4) 
 
 ![alt text](http://image.noelshack.com/fichiers/2019/21/2/1558446377-diagrammef4.png)
@@ -231,16 +176,6 @@ Aucune 
  
 ![alt text](http://image.noelshack.com/fichiers/2019/21/2/1558446378-nuagef4.png)
  
-### Difficultés rencontrées pendant la séance n°4
-Aucune difficulté particulière …
-
-### Remarques et commentaires sur la séance n°4
-Aucune difficulté particulière …
-
-### Conclusion
-
-J'ai donc réussi à créer un missile sur mon vaisseau, et à pouvoir faire tirer ce missile par le vaisseau.
-
 ---
 
 ## Fonctionnalité n°5 : Ajouter un envahisseur
@@ -261,9 +196,6 @@ J'ai donc réussi à créer un missile sur mon vaisseau, et à pouvoir faire tir
 ○	On effectue des tests de déplacements en fonction de la direction
 ○	On écrit des méthodes semblables à celles des autres sprites pour pouvoir déplacer l'envahisseur
 
-### Fonctionnalité en cours d’implémentation 
-
-Aucune 
 
 ### Diagramme de classes (séance n°5) 
 
@@ -274,24 +206,10 @@ Aucune 
 (généré à l’aide de Source Code Word Cloud Generator avec la liste JavaBlacklist.txt fournie en annexe)
  
 ![alt text](http://image.noelshack.com/fichiers/2019/21/2/1558446377-nuage-de-mots-5.png)
- 
-### Difficultés rencontrées pendant la séance n°4
-Aucune difficulté particulière …
-
-### Remarques et commentaires sur la séance n°4
-Aucune difficulté particulière …
-
-### Conclusion
-
-J'ai donc réussi à créer un envahisseur dans l'espace de jeu, et à pouvoir le faire déplacer sur l'espace de jeu.
 
 ---
----
----
----
----
 
-### Fonctionnalité n°6 : Détecter une collision entre deux sprites
+## Fonctionnalité n°6 : Détecter une collision entre deux sprites
 
 ○	Un système de collision entre les sprites est mis en place : <br/> <br/>
 
@@ -313,6 +231,8 @@ Il suffit ensuite de combiner ces méthodes (une ordonnee et une abscisse touch�
 
 ○	Modification de la méthode évoluer, qui fait disparaître deux sprites lors d'une collision. <br/> <br/>
 
+---
+
 ### Fonctionnalité n°7 : Terminer le jeu
 
 ○	Suite au système de collision, un système de fin de jeu est mis en place :
@@ -329,6 +249,7 @@ Il suffit ensuite de combiner ces méthodes (une ordonnee et une abscisse touch�
  
 ![alt text](http://image.noelshack.com/fichiers/2019/22/2/1559023120-nuage-6-7.png)
  
+
 ### Glossaire
 
 Vaisseau :  Véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs.
