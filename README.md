@@ -249,6 +249,35 @@ Il suffit ensuite de combiner ces méthodes (une ordonnee et une abscisse touch�
  
 ![alt text](http://image.noelshack.com/fichiers/2019/22/2/1559023120-nuage-6-7.png)
  
+---
+
+### Fonctionnalité n°8 : Le vaisseau tire plusieurs missiles
+
+○	Le vaisseau tire plusieurs missiles. Il est donc nécessaire d'effectuer quelques changements : <br/>
+
+■	Les attributs missile, crée comme un type Missile, deviennent des listes de Missile. <br/>
+■	Rectification des méthodes de dessin de missile. <br/>
+■	Rectification des méthodes du jeu principal, contenant les occurences de missiles. <br/>
+■	Ajout d'une méthode de suppression des missiles qui sortent de l'espace de jeu. <br/>
+
+○	Il faut prendre en compte que deux missiles ne doivent pas se chevaucher lors du tir du vaisseau : <br/>
+
+■	Mise en place d'une constante de temps de tir entre deux missiles. (250 ms) <br/>
+■	Prise en compte de ce temps de tir dans la méthode tirerUnMissileDepuisVaisseau (notamment avec l'instruction System.currentTimeMillis() qui permet de mesurer une durée écoulée entre deux instants dans notre cas. <br/>
+
+○	Deux tests supplémentaires sont mis en place pour vérifier la validité du code : <br/>
+■	Cas où le vaisseau peut bel et bien tirer plusieurs missiles. <br/>
+■	Cas où le vaisseau ne pas tirer plusieurs missiles. <br/>
+
+### Diagramme de classes (Fonctionnalité 8) 
+
+![alt text](http://image.noelshack.com/fichiers/2019/22/5/1559305996-diagramme-8.png)
+
+### Nuage de mots du projet spaceinvaders (Fonctionnalité 8) 
+
+(généré à l’aide de Source Code Word Cloud Generator avec la liste JavaBlacklist.txt fournie en annexe)
+ 
+![alt text](http://image.noelshack.com/fichiers/2019/22/5/1559306001-nuage-8.png)
 
 ### Glossaire
 
@@ -258,7 +287,7 @@ Envahisseur  :  Ennemi qui apparaît à l'écran, se déplace automatiquement et
 
 Missile :  Projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
 
-Vitesse : valeur pour laquelle un objet se déplace proportionnellement dans l'espace.
+Vitesse : Valeur pour laquelle un objet se déplace proportionnellement dans l'espace.
  
 ### Annexe : Contenu du fichier JavaBlacklist.txt utilisé 
 
