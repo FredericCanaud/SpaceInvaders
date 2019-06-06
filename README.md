@@ -6,30 +6,26 @@ Groupe G3B
 Département Informatique -
 Année scolaire 2018/2019
 
-# Rapport n°1
  
 ## Sommaire
+	
+   	- Semaine du 29/04 au 05/05 </br></br>
+		[Fonctionnalité n°1 : Déplacer un vaisseau dans l'espace de jeu](#fonc1) </br></br>
+	- Semaine du 06/05 au 12/05 </br></br>
+		[Fonctionnalité n°2 : Dimensionner un nouveau vaisseau (et mise en place d'un moteur graphique)](#fonc2) </br></br>
+	- Semaine du 13/05 au 19/05 </br></br>
+		[Fonctionnalité n°3 : Choisir la vitesse du vaisseau](#fonc3) </br>
+	- Semaine du 20/05 au 24/05 </br></br>
+		[Fonctionnalité n°4 : Tirer un missile depuis le vaisseau](#fonc4) </br>
+		[Fonctionnalité n°5 : Ajouter un envahisseur](#fonc5) </br></br>
+	- Semaine du 27/05 au 09/05 </br></br>
+		[Fonctionnalité n°6 : Détecter une collision entre deux sprites](#fonc6) </br>
+		[Fonctionnalité n°7 : Terminer le jeu](#fonc7) </br>
+		[Fonctionnalité n°8 : Le vaisseau tire plusieurs missiles](#fonc8) </br></br>
+	- Glossaire </br></br>
+	- Annexe
 
-	Introduction
-	Séance n°1 : Déplacer un vaisseau dans l'espace de jeu (finià
-	Séance n°2 : Dimensionner le vaisseau
-	Séance n°3 : Régler vitesse vaisseau + Tirer un missile depuis vaisseau
-	Conclusion
-	Glossaire
-	Annexe
- 
- 
-# Séance n°1 <br/>
-
-(réalisée le 07/05/2019) par Frédéric CANAUD
-
-Objectif de la séance : Déplacer un vaisseau dans l'espace de jeu (fini)
-
-Nombre de fonctionnalités implémentées durant la séance : 1
-
-Description du travail réalisé durant cette séance :
-
-## Fonctionnalité n°1 : Déplacer un vaisseau dans l'espace de jeu (fini)
+## Fonctionnalité n°1 : Déplacer un vaisseau dans l'espace de jeu <a id="fonc1"></a>
 
 ➢	Story n°1 : Créer un espace de jeu : <br/>
 ○	Un espace de jeu est créé aux dimensions données (2D) <br/>
@@ -67,19 +63,9 @@ Remarque : Pour pouvoir, mettre en place les tests, il a été nécessaire d’a
  
 ![alt text](http://image.noelshack.com/fichiers/2019/19/2/1557225305-nuage-de-mots-1.png)
 
----
+- - - -
 
-# Séance n°2
- 
-(réalisée le 14/05/2019) par Frédéric CANAUD
-
-Objectif de la séance : Dimmensionner le vaisseau dans l'espace de jeu + Moteur de jeu (fini)
-
-Nombre de fonctionnalités implémentées durant la séance : 1 (+ Moteur Graphique)
-
-Description du travail réalisé durant cette séance :
-
-## Fonctionnalité n°2 : Dimensionner un nouveau vaisseau (fini)
+## Fonctionnalité n°2 : Dimensionner un nouveau vaisseau (et mise en place d'un moteur graphique) <a id="fonc2"></a>
 
 ➢	Story n°1 : Positionner un nouveau vaisseau avec une dimension donnée <br/>
 ○	Un nouveau vaisseau avec des dimensions (largeur et hauteur) est correctement positionné dans l'esapce de jeu
@@ -108,17 +94,7 @@ Description du travail réalisé durant cette séance :
 
 ---
 
-# Séance n°3
- 
-(réalisée le 21/05/2019) par Frédéric CANAUD
-
-Objectif de la séance : Fonctionnalité n°3 + Fonctionnalité n°4 (finies)
-
-Nombre de fonctionnalités implémentées durant la séance : 2
-
-Description du travail réalisé durant cette séance :
-
-## Fonctionnalité n°3 : Choisir la vitesse du vaisseau
+## Fonctionnalité n°3 : Choisir la vitesse du vaisseau <a id="fonc3"></a>
 
 ➢	Story n°1 : Ajouter la vitesse au visseau
 ○	Un nouvel attribut vitesse est créé (entier)
@@ -143,7 +119,7 @@ Description du travail réalisé durant cette séance :
 
 ---
 
-## Fonctionnalité n°4 : Tirer un missile depuis le vaisseau
+## Fonctionnalité n°4 : Tirer un missile depuis le vaisseau <a id="fonc4"></a>
 
 ➢	Préparatifs de refactoring <br/>
 ○	Création d'une classe mère (Sprite) pour envelopper Missile et Vaisseau
@@ -178,7 +154,7 @@ o	Gestion de la vitesse du missile
  
 ---
 
-## Fonctionnalité n°5 : Ajouter un envahisseur
+## Fonctionnalité n°5 : Ajouter un envahisseur <a id="fonc5"></a>
 
 ➢	Préparatifs de refactoring <br/>
 ○	Création d'une classe mère (Character) pour envelopper Envahisseur et Vaisseau. Elle permettra par la suite une simplification des méthodes
@@ -209,7 +185,7 @@ o	Gestion de la vitesse du missile
 
 ---
 
-## Fonctionnalité n°6 : Détecter une collision entre deux sprites
+## Fonctionnalité n°6 : Détecter une collision entre deux sprites <a id="fonc6"></a>
 
 ○	Un système de collision entre les sprites est mis en place : <br/> <br/>
 
@@ -233,7 +209,7 @@ Il suffit ensuite de combiner ces méthodes (une ordonnee et une abscisse touch�
 
 ---
 
-### Fonctionnalité n°7 : Terminer le jeu
+## Fonctionnalité n°7 : Terminer le jeu <a id="fonc7"></a>
 
 ○	Suite au système de collision, un système de fin de jeu est mis en place :
 
@@ -251,7 +227,7 @@ Il suffit ensuite de combiner ces méthodes (une ordonnee et une abscisse touch�
  
 ---
 
-### Fonctionnalité n°8 : Le vaisseau tire plusieurs missiles
+## Fonctionnalité n°8 : Le vaisseau tire plusieurs missiles <a id="fonc8"></a>
 
 ○	Le vaisseau tire plusieurs missiles. Il est donc nécessaire d'effectuer quelques changements : <br/>
 
