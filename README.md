@@ -1,29 +1,41 @@
-# Space Invaders <br/>
+# Space Invaders
 
-CANAUD Frédéric
-Groupe G3B
+![Space Invaders](https://s3.amazonaws.com/digitaltrends-uploads-prod/2014/07/space-invaders.jpg)
 
-Département Informatique -
-Année scolaire 2018/2019
+**Space Invaders** est un jeu de tir spatial fixe en deux dimensions (**2D**).
+Le joueur contrôle un **vaisseau spatial** muni d'un canon laser qu'il peut déplacer *horizontalement*, au *bas de l'écran*.
+Dans les airs, des rangées d'aliens (**ennemis**) se déplacent latéralement tout en se rapprochant progressivement du sol et en lançant des **missiles**. </br></br>
+L'objectif est de détruire avec le canon laser les vagues ennemies, *qui se composent de cinq rangées de onze aliens chacune*, avant qu'elles n'atteignent le bas de l'écran.</br></br>
+Le joueur gagne des *points* à chaque fois qu'il détruit un envahisseur.</br>
+Le jeu n'autorise qu'**un tir à la fois** et permet d'annuler ceux des ennemis en tirant dessus.</br>
+La **vitesse** et la *musique* s'accélèrent au fur et à mesure que le nombre d'aliens diminue.</br>
+L'élimination totale de ces derniers amène une *nouvelle vague ennemie plus difficile*, et ce **indéfiniment**.
+Le jeu ne se termine que lorsque le joueur perd, ce qui en fait le *premier jeu sans fin*.</br>
+Les aliens tentent de détruire le canon en tirant dessus pendant qu'ils s'approchent du bas de l'écran.</br>
+S'ils l'atteignent ou arrivent jusqu'au sol, ils ont réussi leur invasion et le jeu est fini.</br>
+De temps en temps, un vaisseau spatial apparait tout en haut de l'écran et fait gagner des *points bonus* s'il est détruit. 
+Quatre bâtiments destructibles permettent au joueur de se protéger des tirs ennemis.</br>
+Ces défenses se désintègrent progressivement sous l'effet des projectiles adverses et de ceux du joueur.</br>
+*Le nombre de bâtiments n'est pas le même d'une version à l'autre.*</br>
 
  
-## Sommaire
-	
-   	- Semaine du 29/04 au 05/05 </br></br>
-		[Fonctionnalité n°1 : Déplacer un vaisseau dans l'espace de jeu](#fonc1) </br></br>
-	- Semaine du 06/05 au 12/05 </br></br>
-		[Fonctionnalité n°2 : Dimensionner un nouveau vaisseau (et mise en place d'un moteur graphique)](#fonc2) </br></br>
-	- Semaine du 13/05 au 19/05 </br></br>
-		[Fonctionnalité n°3 : Choisir la vitesse du vaisseau](#fonc3) </br>
-	- Semaine du 20/05 au 24/05 </br></br>
-		[Fonctionnalité n°4 : Tirer un missile depuis le vaisseau](#fonc4) </br>
-		[Fonctionnalité n°5 : Ajouter un envahisseur](#fonc5) </br></br>
-	- Semaine du 27/05 au 09/05 </br></br>
-		[Fonctionnalité n°6 : Détecter une collision entre deux sprites](#fonc6) </br>
-		[Fonctionnalité n°7 : Terminer le jeu](#fonc7) </br>
-		[Fonctionnalité n°8 : Le vaisseau tire plusieurs missiles](#fonc8) </br></br>
-	- Glossaire </br></br>
-	- Annexe
+## Fonctionnalités réalisées
+
+- Semaine du 29/04/19 au 05/05/19 </br></br>
+[Fonctionnalité n°1 : Déplacer un vaisseau dans l'espace de jeu](#fonc1) </br></br>
+- Semaine du 06/05/19 au 12/05/19 </br></br>
+[Fonctionnalité n°2 : Dimensionner un nouveau vaisseau (et mise en place d'un moteur graphique)](#fonc2) </br></br>
+- Semaine du 13/05/19 au 19/05/19 </br></br>
+[Fonctionnalité n°3 : Choisir la vitesse du vaisseau](#fonc3) </br></br>
+- Semaine du 20/05/19 au 24/05/19 </br></br>
+[Fonctionnalité n°4 : Tirer un missile depuis le vaisseau](#fonc4) </br>
+[Fonctionnalité n°5 : Ajouter un envahisseur](#fonc5) </br></br>
+- Semaine du 27/05/19 au 09/06/19 </br></br>
+[Fonctionnalité n°6 : Détecter une collision entre deux sprites](#fonc6) </br>
+[Fonctionnalité n°7 : Terminer le jeu](#fonc7) </br>
+[Fonctionnalité n°8 : Le vaisseau tire plusieurs missiles](#fonc8) </br></br>
+- Glossaire </br></br>
+- Annexe
 
 ## Fonctionnalité n°1 : Déplacer un vaisseau dans l'espace de jeu <a id="fonc1"></a>
 
